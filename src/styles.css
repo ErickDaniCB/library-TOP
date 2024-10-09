@@ -1,6 +1,17 @@
 /* styles.css */
+*{
+  box-sizing: border-box;
+}
+
 body {
-    background-color: rebeccapurple;
+    background-color: rgb(57, 57, 57);
+    height: 100vh;
   }
 
-  
+h1 {
+  color: white;
+}
+
+#interaction, #library, #content {
+  outline: 1px solid red;
+}
