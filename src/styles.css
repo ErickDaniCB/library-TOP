@@ -13,5 +13,12 @@ h1 {
 }
 
 #interaction, #library, #content {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
+}
+
+.card {
+  outline: 2px solid pink;
+  display: flex;
+  justify-content: space-around;
+  background-color: grey;
 }
