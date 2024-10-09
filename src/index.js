@@ -7,7 +7,7 @@ let library = [
     author: "Brandon Sanderson",
     pages: 666,
     read: true,
-  },
+  }
 ];
 
 function bookConstructor(name, author, pages, read) {
@@ -19,15 +19,28 @@ function bookConstructor(name, author, pages, read) {
   };
 }
 
-// console.log(bookConstructor("aaaa", "oooo", 233, false));
-
 function addBook(name, author, pages, read) {
   library.push(bookConstructor(name, author, pages, read));
 }
 
-// DIALOG 
+// DISPLAY DIALOG FORM
 
-const add = document.getElementById("add");
+const openBtn = document.getElementById("open-dialog");
 const dialog = document.getElementById("dialog");
 
-add.addEventListener("click", () => {dialog.showModal()})
+
+openBtn.addEventListener("click", () => {
+  dialog.showModal();
+});
+
+// GET FORM INFO AND ADD IT TO LIBRARY[]  
+
+const title = document.getElementById("title");
+const author = document.getElementById("author");
+const pages = document.getElementById("pages");
+const read = document.getElementById("read");
+const addBtn = document.getElementById("add");
+
+addBtn.addEventListener("click", (event) => {
+  addBook(title.value, author.value, pages.value, read.checked)
+});
