@@ -10,12 +10,15 @@ let libraryArr = [
   },
 ];
 
+let bookID = 0;
+
 function bookConstructor(title, author, pages, read) {
   return {
     title,
     author,
     pages,
     read,
+    id: bookID++
   };
 }
 
@@ -52,22 +55,33 @@ const libraryDiv = document.getElementById("library");
 function createCard(obj) {
   const card = document.createElement("div");
   card.setAttribute("class", "card");
+
   const cardTitle = document.createElement("h3");
   cardTitle.textContent = obj.title;
+
   const cardAuthor = document.createElement("h3");
   cardAuthor.textContent = obj.author;
+
   const cardPages = document.createElement("h3");
   cardPages.textContent = obj.pages;
+
+  const cardRead = document.createElement("input");
+  cardRead.setAttribute("type", "checkbox");
+  if(obj.read){
+    cardRead.setAttribute("checked", "true")
+  }
+
   libraryDiv.appendChild(card);
   card.appendChild(cardTitle);
   card.appendChild(cardAuthor);
   card.appendChild(cardPages);
+  card.appendChild(cardRead);
 }
 
-// UPDATE LIBRARY DISPLAY   
-function updateLibrary (){ 
-  while (libraryDiv.firstChild){
-    libraryDiv.removeChild(libraryDiv.firstChild)
+// UPDATE LIBRARY DISPLAY
+function updateLibrary() {
+  while (libraryDiv.firstChild) {
+    libraryDiv.removeChild(libraryDiv.firstChild);
   }
   libraryArr.forEach((bookObj) => {
     createCard(bookObj);

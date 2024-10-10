@@ -1,23 +1,34 @@
 /* styles.css */
-*{
+* {
   box-sizing: border-box;
 }
 
 body {
-    background-color: rgb(57, 57, 57);
-    height: 100vh;
-  }
+  background-color: rgb(57, 57, 57);
+}
 
 h1 {
   color: white;
 }
 
-#interaction, #library, #content {
-  /* outline: 1px solid red; */
+#open-dialog{
+  font-size: 2rem;
+}
+
+#library { 
+  display: grid;
+  grid-template: repeat(3, auto);
+  width: 100%;
 }
 
 .card {
   outline: 2px solid pink;
+  display: flex;
+  justify-content: space-around;
+  background-color: grey;
+}
+
+#headers {
   display: flex;
   justify-content: space-around;
   background-color: grey;
