@@ -7,6 +7,12 @@ body {
   background-color: rgb(57, 57, 57);
 }
 
+#headers {
+  display: flex;
+  justify-content: space-around;
+  background-color: grey;
+}
+
 h1 {
   color: white;
 }
@@ -23,12 +29,6 @@ h1 {
 
 .card {
   outline: 2px solid pink;
-  display: flex;
-  justify-content: space-around;
-  background-color: grey;
-}
-
-#headers {
   display: flex;
   justify-content: space-around;
   background-color: grey;
